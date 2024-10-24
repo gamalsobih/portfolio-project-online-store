@@ -7,7 +7,8 @@
 
 ## 📋 Overview
 The Online Shopping Store is a modern e-commerce platform designed to provide users with an effortless online shopping experience. Users can browse products, add items to their shopping cart, and make purchases seamlessly. This project emphasizes a smooth and intuitive user interface, featuring robust authentication and efficient state management through React and Redux, ensuring a scalable and reusable code architecture.
-[![Demo video]()](https://drive.google.com/file/d/1TiHM3Wsy4Uip37XBjiJEREmBR7oTVBMa/view?usp=sharing)
+[![Demo video]()](https://drive.google.com/file/d/1TiHM3Wsy4Uip37XBjiJEREmBR7oTVBMa/view?usp=sharing)<br/>
+[![presentation]()](https://docs.google.com/presentation/d/1OD5Y6689GOq1OEMe-jSTzpuEyQI8bLlanvKAoSORlSQ/edit#slide=id.p))<br/>
 
 <span style="color: white;">**gamalsobih**</span>
 [![LinkedIn](https://img.icons8.com/color/16/000000/linkedin-circled.png)](https://www.linkedin.com/in/gamalsobih/)
