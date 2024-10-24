@@ -6,10 +6,7 @@ const Hero = () => {
   const cat = useParams();
   return (
     <div className='hero'>
-        <div className='sidebar'  >this is my sidebar </div>
-        <div>
         <Product cat={cat.rat}/>
-        </div>
     </div>
   )
 }

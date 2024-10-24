@@ -11,6 +11,10 @@ const NavBar = () => {
     const userData = useSelector((state) => state.auth.userData); // استخدام Redux لجلب بيانات المستخدم
     const isLoggedIn = !!userData; // تحقق مما إذا كان المستخدم مسجلاً للدخول
 
+    // قراءة عناصر السلة من Redux
+    const cartItems = useSelector((state) => state.cart.cartItems);
+    const totalItems = cartItems.reduce((total, item) => total + (item.quantity || 1), 0); // حساب العدد الإجمالي للعناصر
+
     useEffect(() => {
         if (isLoggedIn) {
             // يمكنك تنفيذ أي إجراءات تحتاج إلى تنفيذها عند تسجيل الدخول، إذا لزم الأمر
@@ -29,9 +33,9 @@ const NavBar = () => {
                 <div>@ {isLoggedIn ? userData.address.city : 'Location'}</div>
             </div>
             <div className='search'>
-                <button>all</button>
-                <input type='textbox' className='searchinput' placeholder='Search...' />
-                <button>search</button>
+                <button className='searchb'>all</button>
+               <input type='textbox' className='searchinput' placeholder='Search...' />
+                <button className='searchb'>search</button>
             </div>
             <div className='lang'>
                 <img src={Egy} className='egy' alt="egy flag" />En
@@ -45,6 +49,7 @@ const NavBar = () => {
             <Link to={"/mycart"}>
                 <div>
                     <img src={cart} className='cartlogonav' alt="cart" />
+                    {totalItems > 0 && <span className="cart-count">{totalItems}</span>} {/* عرض العدد */}
                 </div>
             </Link>
         </div>

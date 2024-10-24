@@ -1,9 +1,15 @@
 import React from 'react'
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
+import sale1 from "./images/sale1.jfif";
+import sale2 from "./images/sale2.webp";
+import sale3 from "./images/sale3.jpg";
+import sale4 from "./images/sale4.jpg";
+import { Link } from 'react-router-dom';
 
 const Slider = () => {
-  return (<><div className="slider" >
+  return (<> <div className="slidercon">
+<div className="slider" >
 <Slide className="slider"
   autoplay={true}
   onChange={function noRefCheck(){}}
@@ -40,13 +46,14 @@ const Slider = () => {
     </div>
   </div>
 </Slide></div>
-    <div className='promotionCon'>
-    <div className='promotionCard'>promotion 1</div>
-    <div className='promotionCard'>promotion 2</div>
-    <div className='promotionCard'>promotion 3</div>
-    <div className='promotionCard'>promotion 4</div>
-    <div className='promotionCard'>promotion 5</div>
-  
+<div className='promotionCon'>
+<div className='promotionCard'><Link to ={`/products/electronics`}  ><img src={sale1} className='promotionphoto'/></Link></div>
+<div className='promotionCard'><Link to ={`/products/jewelery`}  > <img src={sale2} className='promotionphoto'/></Link></div>
+<div className='promotionCard'><Link to ={`/products/men's%20clothing`}  > <img src={sale3} className='promotionphoto'/></Link></div>
+<div className='promotionCard'><Link to ={`/products/women's%20clothing`}  > <img src={sale4} className='promotionphoto'/></Link></div>
+<div className='promotionCard'><Link to ={`/products/`}  > <img src={sale4} className='promotionphoto'/></Link></div>
+      
+</div>
 </div>
 </>
 

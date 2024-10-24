@@ -62,7 +62,7 @@ const Cart = () => {
             <h1>Your Carts</h1>
             {carts.length > 0 ? (
                 carts.map((cart, index) => (
-                    <div key={index} >
+                    <div key={index}  className='cartContainer'>
                        <div className='cartadress'> <h3>Cart {index + 1}</h3></div>
                         <div className='cartcon'>
                         {cart.products.map(item => {

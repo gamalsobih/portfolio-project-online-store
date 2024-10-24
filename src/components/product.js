@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import '../App.css';
 import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../store/slices/cartSlice'; // تأكد من مسار الاستيراد
 
 const Product = ({ cat }) => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
+  const dispatch = useDispatch(); // تفعيل useDispatch
 
   useEffect(() => {
     setLoading(true);
@@ -28,12 +31,17 @@ const Product = ({ cat }) => {
     return des.length > 60 ? des.slice(0, 60) + " ..." : des;
   };
 
-  let filteredProducts =data;
-  if(cat){
-  filteredProducts = data.filter(product => {
-    return product.category === cat;
-  });}
-  
+  let filteredProducts = data;
+  if (cat) {
+    filteredProducts = data.filter(product => {
+      return product.category === cat;
+    });
+  }
+
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product)); // إضافة المنتج إلى السلة
+  };
+
   return (
     <div className='Product'>
       {loading && (
@@ -55,6 +63,7 @@ const Product = ({ cat }) => {
               <div className='price'>{product.price} <b>SD</b></div>
             </div>
             <div className='des'>{deslength(product.description)}</div>
+            <button onClick={() => handleAddToCart(product)} className='addtoCart'>Add to Cart</button> {/* زر الإضافة */}
           </div>
         ))
       ) : (

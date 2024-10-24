@@ -30,7 +30,7 @@ const UserProfile = () => {
   };
 
   return (
-    <div>
+    <div className='userprofile'>
       {userData ? (
         <div>
           <h2>Welcome, {userData.name.firstname}!</h2>

@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  justify-content: center;
 }
 
 .App-logo {
@@ -46,7 +47,10 @@
   background-color: black;
   width: 100%;
   color: white;
-  align-items:center ;
+  justify-content:center ;
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
   ;
 }
 .card{
@@ -88,7 +92,29 @@ img{
 
 }
 .searchinput{
-flex: 1;}
+  margin: 0;
+  flex: 1;
+  height: 33px;
+  border: 0;
+}
+.searchinput:hover{
+  background-color: #fafafa;
+  color: #818181;
+}
+.searchinputcon{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.searchb{
+  height: 35px;
+  margin: 0;
+  border: 0;
+}
+.searchb:hover{
+  background-color: #e6e5e5;
+
+}
 .egy{
   max-width: 60%;
   }
@@ -118,7 +144,9 @@ flex: 1;}
   }
   .cat{
     padding-left:10px;
-    height: 95%;
+    height: 90%;
+    border:#282c34 solid 1px; ;
+
   }
   .cat:hover{
 border: #fff solid 1px;  }
@@ -127,13 +155,17 @@ border: #fff solid 1px;  }
   flex-direction: row;
   flex: 1;
   width: 100%;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
   
   }
 .Product{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
+  width: 80%;
+  min-height: 710px;
 }
 .card{
   background-color: rgb(245, 245, 245) ;
@@ -157,6 +189,16 @@ border: #fff solid 1px;  }
 .proimgsrc{
   max-width: 100%;
   max-height: 100%;
+}
+.cart-count {
+  background-color: red; /* اللون الخلفي */
+  color: white; /* لون النص */
+  border-radius: 50%; /* لجعل الشكل دائري */
+  padding: 0 6px; /* تباعد داخلي */
+  font-size: 14px; /* حجم الخط */
+  margin-left:-20z`px; /* تباعد عن النص */
+  width: 15px;
+  height: 20px;
 }
 
 .sidebar{
@@ -192,6 +234,9 @@ a:link,a:visited{
   width: 70%;
 
 }
+.slidercon{
+  height: 1200px;
+}
 .promotionCard{
   width: 25%;
   height: 300px;
@@ -199,6 +244,14 @@ a:link,a:visited{
   padding :20px;
   margin: 20px;
   justify-content: center;
+  transition: .3s;
+
+}
+.promotionphoto{
+min-width: 100%;  min-height: 100%;
+}
+.promotionCard:hover{
+  width: 27%;
 
 }
 .login{
@@ -222,11 +275,14 @@ input{
   width: 100%;
   display: flex;
   flex-direction: row;
-justify-content: center;}
+  align-items: center;
+  justify-content: center;
+}
 .cartproduct{
   padding: 10px;
   margin: 10px;
   width: 20%;
+  height: 250px;
   border: #282c34 solid 2px ;
   border-radius: 10px;
   align-items: first baseline;
@@ -235,15 +291,69 @@ justify-content: center;}
   .cartadress{
     background-color: rgb(226, 224, 224);
     padding-left: 5px;
+    width: 100%;
     justify-content: space-around;
     display: flex;
     flex-direction: row;
   }
   .proceedtobuy{
     margin: 10px;
+    width: 100px;
     height: 100px;
+    border-radius: 30%;
+    border: 0px;
+    background-color: #f3a751;
+    transition: .3s;
   }
+  .proceedtobuy:hover{
+    background-color: #e48e2d;
+    border-radius: 50%;
 
+  }
+  .cartContainer
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+body{
+  margin: 0px;
+}
+.logincon{
+  height: 750px;
+}
+.loginuser{
+  border: 0px;
+  border-radius: 5px;
+  height: 50px;
+  padding-left: 10px ;
+  background-color: #fafafa;
+}
+.logincon{
+  height: 750px;
+}
+.loginuser:hover{
+  background-color: #f0f0f0;
+}
+
+.userprofile{
+  height: 720px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.addtoCart{
+  border-radius: 10px;
+background-color: #e48e2d;
+border: 0px;
+color: white;}
+.addtoCart:hover{
+  background-color: #f7a548;
+  color: #282c34;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
