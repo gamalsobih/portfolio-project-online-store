@@ -22,7 +22,7 @@ The Online Shopping Store is a modern e-commerce platform designed to provide us
 - **FakeStoreAPI**: A mock backend providing product data for development.
 
 ## ✨ Features
-- **User  Authentication**: Secure login and sign-up functionality.
+- **User  Authentication**: Secure login functionality.
 - **Product Listings**: Browse products with category filters and detailed views.
 - **Cart Management**: Add,  items in the shopping cart seamlessly.
 
