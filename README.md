@@ -35,7 +35,7 @@ The Online Shopping Store is a modern e-commerce platform designed to provide us
 Ensure that you have the following installed on your local machine:
 
 - [react.js](https://react.dev/) 
-- [redux](https://redux.js.org/) (set up a local or cloud MongoDB instance)
+- [redux](https://redux.js.org/) 
 
 ### Steps to Run Locally
 
