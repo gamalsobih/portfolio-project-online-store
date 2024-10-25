@@ -1,373 +1,199 @@
+/* Main application container */
 .App {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  justify-content: center;
+  text-align: center; /* Center-align text */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Stack children vertically */
+  min-height: 100vh; /* Minimum height of the viewport */
+  justify-content: center; /* Center children vertically */
 }
 
+/* Logo styles */
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 40vmin; /* Responsive height based on viewport */
+  pointer-events: none; /* Disable pointer events on logo */
 }
 
+/* Animation for logo spinning */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 20s linear; /* Spin animation */
   }
 }
 
+/* Header styles */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #282c34; /* Dark background color */
+  min-height: 100vh; /* Minimum height of the viewport */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  justify-content: center; /* Center children vertically */
+  font-size: calc(10px + 2vmin); /* Responsive font size */
+  color: white; /* Text color */
 }
 
+/* Link styles */
 .App-link {
-  color: #61dafb;
-}
-.thankyou{
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  min-height: 750px;
+  color: #61dafb; /* Link color */
 }
 
-.Navbar{
-  background-color: rgb(0, 0, 0);
-  width: 100%;
-  height: 80px;
-  color: white;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-
-}
-.Footer{
-  background-color: black;
-  width: 100%;
-  color: white;
-  justify-content:center ;
-  display: flex;
-  flex-direction: row;
-  padding: 0px;
-  ;
-}
-.card{
-  background-color: antiquewhite ;
- width: 15%;
- height: 300px;
- margin: 20px;
- padding: 10px;
-}
-.container{
-  display: flex;
-  flex-direction: row;
-}
-img{
-  max-width: 80%;
-  max-height: 50%;
-}
-.logo{
-  max-width: 90%;
-  transition: .3s;
-
-} 
-.logo:hover{
-  max-width: 100%;
-  
-} 
-.logocontainer{
-  width: 300px;
-  padding: 10px;
-}
-.location{
-  padding: 10px;
-}
-.search{
-  width: 60%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-}
-.searchinput{
-  margin: 0;
-  flex: 1;
-  height: 33px;
-  border: 0;
-}
-.searchinput:hover{
-  background-color: #fafafa;
-  color: #818181;
-}
-.searchinputcon{
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-.searchb{
-  height: 35px;
-  margin: 0;
-  border: 0;
-}
-.searchb:hover{
-  background-color: #e6e5e5;
-
-}
-.egy{
-  max-width: 60%;
-  }
-  .lang{
-    max-width: 40px;
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-  }
-  .Acc{
-    font-size: .7rem;
-  }
-  .cartlogonav{
-    max-height: 70px;
-    padding-left: 20px;
-    transition: .3s;
-  }  .cartlogonav:hover{
-    max-height: 80px;
-    padding-left: 20px;
-  }
-
-  .catbar{
-    display: flex;
-    flex-direction: row;
-    background-color:#282c34;
-    color: #fff;
-  }
-  .cat{
-    padding-left:10px;
-    height: 90%;
-    border:#282c34 solid 1px; ;
-
-  }
-  .cat:hover{
-border: #fff solid 1px;  }
-.hero{
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  width: 100%;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  
-  }
-.Product{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 80%;
-  min-height: 710px;
-}
-.card{
-  background-color: rgb(245, 245, 245) ;
- width: 15%;
- height: 300px;
- margin: 20px;
- padding: 10px;
-}
-.card:hover{
-  background-color: rgb(241, 241, 241) ;
-}
-.pricecon{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+/* Thank you page styles */
+.thankyou {
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Stack children vertically */
+  align-content: center; /* Center content */
+  align-items: center; /* Center items */
+  justify-content: center; /* Center content vertically */
+  min-height: 750px; /* Minimum height */
 }
 
-.proimgdiv{
-  width: 100%;
-  height: 50%;}
-.proimgsrc{
-  max-width: 100%;
-  max-height: 100%;
-}
-.cart-count {
-  background-color: red; /* اللون الخلفي */
-  color: white; /* لون النص */
-  border-radius: 50%; /* لجعل الشكل دائري */
-  padding: 0 6px; /* تباعد داخلي */
-  font-size: 14px; /* حجم الخط */
-  margin-left:-20x; /* تباعد عن النص */
-  width: 15px;
-  height: 20px;
+/* Navbar styles */
+.Navbar {
+  background-color: rgb(0, 0, 0); /* Black background */
+  width: 100%; /* Full width */
+  height: 80px; /* Fixed height */
+  color: white; /* Text color */
+  display: flex; /* Use flexbox layout */
+  flex-direction: row; /* Align children in a row */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
 }
 
-.sidebar{
-  min-width: 25%;
-  background-color: blanchedalmond;
-  
-}
-a:link,a:visited{
-  color: white;
-  text-decoration: none;
-  
-}
-.each-slide-effect,.sliderBanner{
-  height: 800px;
-  z-index: 1;
-}
-.slider{
-  z-index: 2;
-  position: relative;
-
-}
-.promotionCon
-{
-  position: absolute;
-  display: flex;
-
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: -400px;
-  justify-content: center;
-  z-index: 3;
-  left: 15%; /* للتمركز أفقيًا */
-  width: 70%;
-
-}
-.slidercon{
-  height: 1200px;
-}
-.promotionCard{
-  width: 25%;
-  height: 300px;
-  background-color: #fff;
-  padding :20px;
-  margin: 20px;
-  justify-content: center;
-  transition: .3s;
-
-}
-.promotionphoto{
-min-width: 100%;  min-height: 100%;
-}
-.promotionCard:hover{
-  width: 27%;
-
-}
-.login{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 50px;
-  justify-content: center;
-  align-items: center;
-}
-input{
-  margin: 5px;
-  width: 250px;
-
-}
-.user-profile
-{
-  text-align: center;
-}
-.cartcon{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-.cartproduct{
-  padding: 10px;
-  margin: 10px;
-  width: 20%;
-  height: 250px;
-  border: #282c34 solid 2px ;
-  border-radius: 10px;
-  align-items: first baseline;
-}.cartproduct:hover{
-  background-color: aliceblue;}
-  .cartadress{
-    background-color: rgb(226, 224, 224);
-    padding-left: 5px;
-    width: 100%;
-    justify-content: space-around;
-    display: flex;
-    flex-direction: row;
-  }
-  .proceedtobuy{
-    margin: 10px;
-    width: 100px;
-    height: 100px;
-    border-radius: 30%;
-    border: 0px;
-    background-color: #f3a751;
-    transition: .3s;
-  }
-  .proceedtobuy:hover{
-    background-color: #e48e2d;
-    border-radius: 50%;
-
-  }
-  .cartContainer
-  {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-body{
-  margin: 0px;
-}
-.logincon{
-  height: 750px;
-}
-.loginuser{
-  border: 0px;
-  border-radius: 5px;
-  height: 50px;
-  padding-left: 10px ;
-  background-color: #fafafa;
-}
-.logincon{
-  height: 750px;
-}
-.loginuser:hover{
-  background-color: #f0f0f0;
+/* Footer styles */
+.Footer {
+  background-color: black; /* Black background */
+  width: 100%; /* Full width */
+  color: white; /* Text color */
+  justify-content: center; /* Center content */
+  display: flex; /* Use flexbox layout */
+  flex-direction: row; /* Align children in a row */
+  padding: 0px; /* No padding */
 }
 
-.userprofile{
-  height: 720px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-.addtoCart{
-  border-radius: 10px;
-background-color: #e48e2d;
-border: 0px;
-color: white;}
-.addtoCart:hover{
-  background-color: #f7a548;
-  color: #282c34;
-}
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Card styles */
+.card {
+  background-color: antiquewhite; /* Light background */
+  width: 15%; /* Fixed width */
+  height: 300px; /* Fixed height */
+  margin: 20px; /* Margin around card */
+  padding: 10px; /* Padding inside card */
 }
 
+/* Container styles */
+.container {
+  display: flex; /* Use flexbox layout */
+  flex-direction: row; /* Align children in a row */
+}
+
+/* Image styles */
+img {
+  max-width: 80%; /* Scale image to 80% of its original size */
+  max-height: 50%; /* Scale image to 50% of its original height */
+}
+
+/* Logo styles */
+.logo {
+  max-width: 90%; /* Scale logo to 90% of its original size */
+  transition: .3s; /* Smooth transition for hover effect */
+}
+
+.logo:hover {
+  max-width: 100%; /* Scale logo to full size on hover */
+}
+
+/* Logo container styles */
+.logocontainer {
+  width: 300px; /* Fixed width */
+  padding: 10px; /* Padding */
+}
+
+/* Location styles */
+.location {
+  padding: 10px; /* Padding */
+}
+
+/* Search bar styles */
+.search {
+  width: 60%; /* Fixed width */
+  display: flex; /* Use flexbox layout */
+  flex-direction: row; /* Align children in a row */
+  justify-content: center; /* Center items horizontally */
+}
+
+/* Search input styles */
+.searchinput {
+  margin: 0; /* No margin */
+  flex: 1; /* Take up available space */
+  height: 33px; /* Fixed height */
+  border: 0; /* No border */
+}
+
+/* Search input hover effect */
+.searchinput:hover {
+  background-color: #fafafa; /* Light background on hover */
+  color: #818181; /* Dark text color on hover */
+}
+
+/* Search input container styles */
+.searchinputcon {
+  flex: 1; /* Take up available space */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Stack children vertically */
+}
+
+/* Search button styles */
+.searchb {
+  height: 35px; /* Fixed height */
+  margin:  0; /* No margin */
+  padding: 0; /* No padding */
+  border: 0; /* No border */
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text color */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.searchb:hover {
+  background-color: #3e8e41; /* Darker green background on hover */
+}
+
+/* Search button container styles */
+.searchbcon {
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+/* Search result styles */
+.searchresult {
+  padding: 10px; /* Padding */
+  border-bottom: 1px solid #ccc; /* Bottom border */
+}
+
+.searchresult:hover {
+  background-color: #f0f0f0; /* Light background on hover */
+}
+
+/* Search result container styles */
+.searchresultcon {
+  padding: 10px; /* Padding */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Stack children vertically */
+}
+
+/* Search result item styles */
+.searchresultitem {
+  padding: 10px; /* Padding */
+  border-bottom: 1px solid #ccc; /* Bottom border */
+}
+
+.searchresultitem:hover {
+  background-color: #f0f0f0; /* Light background on hover */
+}
+
+/* Search result item container styles */
+.searchresultitemcon {
+  padding: 10px; /* Padding */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Stack children vertically */
+}
