@@ -16,8 +16,9 @@ const Thankyou = () => {
 
   return (
     <div className='thankyou'>
-      <h1>Thank you for your order</h1>
-    </div>
+      <h1>Thank you for your order</h1> <br/>
+      <h3>You will be redirected to the Home page</h3>
+      </div>
   );
 }
 
