@@ -9,6 +9,7 @@ import Hero from './components/Hero'
 import { useDispatch } from 'react-redux';
 import { setUserData } from './store/slices/authSlice'; // تأكد من وجود هذا الـ slice
 import { useEffect } from 'react';
+import Thankyou from './components/Thankyou';
 const App = () => {
   const dispatch = useDispatch();
 
@@ -32,7 +33,7 @@ const App = () => {
               { path: "login", element: <Login /> },
               { path: "user-profile", element: <UserProfile /> },
               { path: "mycart", element: <Cart /> },
-              { path: "thankyou", element: <Home /> }
+              { path: "thankyou", element: <Thankyou /> }
           ]
       }
   ]);
