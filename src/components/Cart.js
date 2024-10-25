@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
-import { setCartItems } from '../store/slices/cartSlice'; // تأكد من وجود هذا الـ slice
+import { setCartItems } from '../store/slices/cartSlice'; // Make sure this slice exists
+import { Link } from 'react-router-dom';
 import Login from './Login';
 
 const Cart = () => {
     const dispatch = useDispatch();
     const userData = useSelector((state) => state.auth.userData);
     const isLoggedIn = !!userData;
-    const [carts, setCarts] = useState([]); // لتخزين العربات
-    const [productDetails, setProductDetails] = useState({}); // لتخزين تفاصيل المنتجات
+    const [carts, setCarts] = useState([]); // To store carts
+    const [productDetails, setProductDetails] = useState({});// To store product details // لتخزين تفاصيل المنتجات
 
     useEffect(() => {
         if (isLoggedIn) {
@@ -20,10 +21,10 @@ const Cart = () => {
     const fetchCarts = async (userId) => {
         try {
             const response = await axios.get(`https://fakestoreapi.com/carts/user/${userId}`);
-            dispatch(setCartItems(response.data)); // تحديث حالة العربة في Redux
-            setCarts(response.data); // تخزين العربات في الحالة
+            dispatch(setCartItems(response.data)); // updating cart Redux
+            setCarts(response.data); // storing cart
             
-            // جلب تفاصيل المنتجات
+            // fetch product details
             const productIds = response.data.flatMap(cart => cart.products.map(product => product.productId));
             const uniqueProductIds = [...new Set(productIds)];
             fetchProductDetails(uniqueProductIds);
@@ -39,10 +40,10 @@ const Cart = () => {
             );
             const productResponses = await Promise.all(productRequests);
             const products = productResponses.reduce((acc, response) => {
-                acc[response.data.id] = response.data; // تخزين البيانات باستخدام productId كمفتاح
+                acc[response.data.id] = response.data;// Storing data using productId as a key
                 return acc;
             }, {});
-            setProductDetails(products); // تخزين تفاصيل المنتجات
+            setProductDetails(products); // Storing product details
         } catch (error) {
             console.log('Cannot get product details:', error);
         }
@@ -51,7 +52,7 @@ const Cart = () => {
     if (!isLoggedIn) {
         return (
             <>
-                <div>Please login first</div>
+                <div>Please login first</div>// Please login first
                 <Login />
             </>
         );
@@ -83,8 +84,9 @@ const Cart = () => {
                                 </div>
                             );
                         })}
-                    <button className='proceedtobuy'><h3>proceed to buy</h3></button></div>
-                    </div>
+                 <Link  to={"/thankyou"} >   <button className='proceedtobuy'><h3>proceed to buy</h3></button></Link></div> 
+                    </div>// Proceed to buy
+                   
                 ))
             ) : (
                 <div>No items in cart</div>

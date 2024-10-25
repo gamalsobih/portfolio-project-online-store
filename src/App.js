@@ -31,7 +31,8 @@ const App = () => {
               { path: "products/:rat", element: <Hero /> },
               { path: "login", element: <Login /> },
               { path: "user-profile", element: <UserProfile /> },
-              { path: "mycart", element: <Cart /> }
+              { path: "mycart", element: <Cart /> },
+              { path: "thankyou", element: <Home /> }
           ]
       }
   ]);
