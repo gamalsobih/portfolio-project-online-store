@@ -204,7 +204,7 @@ border: #fff solid 1px;  }
   border-radius: 50%; /* لجعل الشكل دائري */
   padding: 0 6px; /* تباعد داخلي */
   font-size: 14px; /* حجم الخط */
-  margin-left:-20z`px; /* تباعد عن النص */
+  margin-left:-20x; /* تباعد عن النص */
   width: 15px;
   height: 20px;
 }
