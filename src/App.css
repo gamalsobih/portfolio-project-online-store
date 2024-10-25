@@ -31,6 +31,13 @@
 .App-link {
   color: #61dafb;
 }
+.thankyou{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
 
 .Navbar{
   background-color: rgb(0, 0, 0);
